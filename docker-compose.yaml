@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - 80
+    ports:
+      - '80:80'
+  
+# To run:
+# docker-compose up --build
+# To destory:
+# docker-compose down
